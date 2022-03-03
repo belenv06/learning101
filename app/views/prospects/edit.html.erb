@@ -4,7 +4,6 @@
   <%= f.input :address %>
   <%= f.input :cellphone %>
   <%= f.input :email %>
-  <%= f.association :status %>
-  <%# Arreglar status :  no esta funcionando correctamente %>
+  <%= f.association :status, label_method: :status, prompt: 'Elige el status' %>
   <%= f.submit %>
 <% end %>
