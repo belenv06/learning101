@@ -1,0 +1,43 @@
+class ProspectsController < ApplicationController
+  def index
+    @prospects = Prospect.all
+  end
+
+  def show
+    @prospect = Prospect.find(params[:id])
+    @comments = @prospect.comments
+    @comment = Comment.new
+  end
+
+  def new
+    @prospect = Prospect.new
+  end
+
+  def create
+    @prospect = Prospect.new(prospects_params)
+    if @prospect.save
+      redirect_to prospect_path(@prospect)
+    else
+      render :new
+    end
+  end
+
+  def edit
+    @prospect = Prospect.find(params[:id])
+  end
+
+  def update
+    @prospect = Prospect.find(params[:id])
+
+    if @prospect.update(prospects_params)
+      redirect_to prospect_path(@prospect)
+    else
+      render :edit
+    end
+  end
+
+  private 
+  def prospects_params
+    params.require(:prospect).permit(:name, :lastname, :address, :cellphone, :email, :status_id)
+  end
+end

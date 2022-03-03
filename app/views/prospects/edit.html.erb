@@ -1,0 +1,10 @@
+<%= simple_form_for @prospect do |f| %>
+  <%= f.input :name %>
+  <%= f.input :lastname %>
+  <%= f.input :address %>
+  <%= f.input :cellphone %>
+  <%= f.input :email %>
+  <%= f.association :status %>
+  <%# Arreglar status :  no esta funcionando correctamente %>
+  <%= f.submit %>
+<% end %>

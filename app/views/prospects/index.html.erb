@@ -1,0 +1,10 @@
+<% @prospects.each do |prospect| %>
+  <%= prospect.name %>
+  <%= prospect.lastname %>
+  <%= prospect.cellphone %>
+  <%= prospect.status.status %>
+  <%= link_to 'ver', prospect_path(prospect) %>
+  <%= link_to 'editar', edit_prospect_path(prospect)%>
+<% end %>
+
+<%= link_to 'create', new_prospect_path %>

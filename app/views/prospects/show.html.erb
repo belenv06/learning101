@@ -1,0 +1,13 @@
+<%= @prospect.name %>
+<%= @prospect.lastname %>
+<%= @prospect.cellphone %>
+
+<h1> Crear nuevo comentario </h1>
+<%= simple_form_for [ @prospect, @comment ] do |f| %>
+<%= f.input :message %>
+<%= f.submit %>
+<% end %>
+
+<% @comments.each do |comment| %>
+<%= comment.message %>
+<% end %>
