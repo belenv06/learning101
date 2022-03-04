@@ -15,6 +15,8 @@ class ProspectsController < ApplicationController
 
   def create
     @prospect = Prospect.new(prospects_params)
+    @user = current_user
+    @prospect.user_id = @user.id
     if @prospect.save
       redirect_to prospect_path(@prospect)
     else

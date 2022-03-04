@@ -1,0 +1,15 @@
+.btn-nuevo {
+  background-color: rgb(182, 216, 205);
+  color: rgb(0, 128, 85);
+  font-weight: 700;
+  border-radius: 5px;
+  &:hover {
+    color: rgb(1, 88, 88);
+  }
+}
+
+.btn-border {
+  border-color: rgb(141, 141, 141);
+  color: rgb(56, 56, 56);
+  border-radius: 15px;
+}

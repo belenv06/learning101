@@ -1,6 +1,7 @@
 <%= @prospect.name %>
 <%= @prospect.lastname %>
 <%= @prospect.cellphone %>
+<i class="fa-regular fa-arrow-left-long"></i> <%= link_to 'regresar atras', prospects_path %>
 
 <h1> Crear nuevo comentario </h1>
 <%= simple_form_for [ @prospect, @comment ] do |f| %>
