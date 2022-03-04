@@ -1,14 +1,43 @@
-.head-table-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: rgb(31, 31, 31);
+// .table-list-prospect {
+//   padding: 50px;
+//   border-radius: 15px;
+//   border: 1px solid rgb(192, 192, 192);
+// }
+
+.table-list-prospect {
+  padding: 15px 5px;
+  border-radius: 15px;
+  border: 1px solid rgb(216, 216, 216);
 }
+
+.circle1 {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: 1px solid #7D2BC9;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-color: #7D2BC9;
+}
+
+
+
+
 
 table {
   // border-spacing: 0;
   width: 100%;
   thead {
     border-radius: none;
+    .head-table-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: #141414;
+    }
   }
   .tbody {
     box-shadow: inset 0 0 0 1.5px rgb(241, 241, 241);
@@ -19,6 +48,9 @@ table {
     tr {
       border-bottom: 1.5px solid rgb(241, 241, 241);
       padding: 10px !important;
+      &:hover {
+        background-color: #e0ecee;
+      }
     }
     tr:last-child {
       border: none;
@@ -39,7 +71,11 @@ table {
     font-size: 16px;
     color: rgb(109, 109, 109);
     text-align: center;
-    padding: 15px 0px;
+    padding: 10px 0px;
+    &:hover {
+      color: #141414;
+      font-weight: 500;
+    }
   }
   // tr td {
   //   border: 1px solid tomato;

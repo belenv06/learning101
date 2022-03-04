@@ -1,9 +1,11 @@
-<%= simple_form_for @prospect do |f| %>
-  <%= f.input :name %>
-  <%= f.input :lastname %>
-  <%= f.input :address %>
-  <%= f.input :cellphone %>
-  <%= f.input :email %>
-  <%= f.association :status, label_method: :status, prompt: 'Elige el status' %>
-  <%= f.submit %>
-<% end %>
+<div class="m-5 p-3"> 
+  <%= simple_form_for @prospect do |f| %>
+    <%= f.input :name %>
+    <%= f.input :lastname %>
+    <%= f.input :address %>
+    <%= f.input :cellphone %>
+    <%= f.input :email %>
+    <%= f.association :status, label_method: :status, prompt: 'Elige el status' %>
+    <%= f.submit %>
+  <% end %>
+</div>

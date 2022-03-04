@@ -1,10 +1,11 @@
 .btn-nuevo {
-  background-color: rgb(182, 216, 205);
-  color: rgb(0, 128, 85);
+  background-color: #ECD8FF;
+  color: #7D2BC9;
   font-weight: 700;
   border-radius: 5px;
   &:hover {
-    color: rgb(1, 88, 88);
+    background-color: #7D2BC9;
+    color: #ECD8FF;
   }
 }
 
@@ -12,6 +13,11 @@
   border-color: rgb(141, 141, 141);
   color: rgb(56, 56, 56);
   border-radius: 15px;
+  &:hover {
+    background-color: black;
+    color: white;
+    border: none;
+  }
   
 }
 

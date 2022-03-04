@@ -25,3 +25,18 @@ i {
 p {
   margin-bottom: 5px;
 }
+
+.title-prospect {
+  font-weight: 700;
+  position: relative;
+  z-index: 100;
+  // border-bottom: 25px solid #2EC79A;
+}
+
+.box-line {
+  height: 20px;
+  width: 310px;
+  position: relative;
+  top: -34px;
+  background-color: #2EC79A;
+}
