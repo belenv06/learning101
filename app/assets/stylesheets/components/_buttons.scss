@@ -12,4 +12,15 @@
   border-color: rgb(141, 141, 141);
   color: rgb(56, 56, 56);
   border-radius: 15px;
+  
+}
+
+.btn-comment {
+  background-color: rgb(47, 92, 92);
+  color: white;
+  border-radius: 15px;
+  padding: 0.7rem 1.25rem;
+  &:hover {
+    color: rgb(96, 190, 190);
+  }
 }
