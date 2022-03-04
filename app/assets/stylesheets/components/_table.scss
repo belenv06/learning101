@@ -11,13 +11,13 @@ table {
     border-radius: none;
   }
   .tbody {
-    box-shadow: inset 0 0 0 1px;
+    box-shadow: inset 0 0 0 1.5px rgb(241, 241, 241);
     border-collapse: collapse;
-    border-radius: 15px;
+    border-radius: 10px;
     // border-radius: 10px !important;
     // border: 1px solid black !important;
     tr {
-      border-bottom: 1px solid rgb(82, 82, 82);
+      border-bottom: 1.5px solid rgb(241, 241, 241);
       padding: 10px !important;
     }
     tr:last-child {
@@ -28,14 +28,18 @@ table {
     text-align: left;
     padding-left: 25px;
     width: 20%;
+  }
 
+  th {
+    text-align: center;
+    padding: 10px;
   }
   td {
     font-weight: 400;
     font-size: 16px;
-    color: rgb(77, 77, 77);
+    color: rgb(109, 109, 109);
     text-align: center;
-    padding: 25px;
+    padding: 15px 0px;
   }
   // tr td {
   //   border: 1px solid tomato;
