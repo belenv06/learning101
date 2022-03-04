@@ -16,7 +16,7 @@ user2 = User.find_or_initialize_by(name: "Juanchi", email: "usuario1@gmail.com")
 user2.password = "291ABASD934"
 user2.password_confirmation = "291ABASD934"
 user2.save
-user3 = User.find_or_initialize_by(name: "Mauri", email: " usuario2@gmail.com")
+user3 = User.find_or_initialize_by(name: "Rosita", email: " usuario2@gmail.com")
 user3.password = "281ABASD932"
 user3.password_confirmation = "281ABASD932"
 user3.save
