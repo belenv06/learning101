@@ -1,17 +1,18 @@
 <div class="m-5 p-3"> 
-  <div class="pb-3 align-items-center"> 
+  <div class="pb-4 align-items-center"> 
     <h2> Nuevos Prospectos </h2>
-    <%= link_to 'Nuevo prospecto', new_prospect_path, class: "links btn btn-nuevo" %>
+    <i class="fa-solid fa-plus"></i> <%= link_to 'Nuevo prospecto', new_prospect_path, class: "links btn btn-nuevo" %>
   </div>
+
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">Email</th>
-        <th scope="col">Nombres</th>
-        <th scope="col">Apellido</th>
-        <th scope="col">Celular</th>
-        <th scope="col">Estado</th>
-        <th scope="col">Opciones</th>
+        <th class="head-table-title" scope="col">Email</th>
+        <th class="head-table-title" scope="col">Nombres</th>
+        <th class="head-table-title" scope="col">Celular</th>
+        <th class="head-table-title" scope="col">Estado</th>
+        <th class="head-table-title" scope="col">Opciones</th>
+        <th class="head-table-title" scope="col">Fecha de registro</th>
 
       </tr>
     </thead>
@@ -19,15 +20,15 @@
     <tbody>
       <% @prospects.each do |prospect| %>
       <tr>
-        <td><%= prospect.email %> </td>
-        <td> <%= prospect.name %>
-         <%= prospect.lastname %></td>
-        <td> <%= prospect.cellphone %></td>
-        <td> <%= prospect.status.status %></td>
-        <td> <%= link_to 'ver', prospect_path(prospect), class: "links" %>
-        <%= link_to 'editar', edit_prospect_path(prospect), class: "links"%>
-        </td>
-         
+          <td class="py-3"> <%= prospect.email %> </td>
+          <td class="py-3"> <%= prospect.name %>
+          <%= prospect.lastname %></td>
+          <td class="py-3"> <%= prospect.cellphone %></td>
+          <td class="py-3"> <%= prospect.status.status %> </td>
+          <td class="py-3"> <%= link_to 'ver', prospect_path(prospect), class: "links fa-regular fa-eye" %>
+           <i class="fa-regular fa-pen-to-square"></i><%= link_to 'editar', edit_prospect_path(prospect), class: "links fa-regular fa-pen-to-square"%> 
+          </td>
+          <td> <%=prospect.created_at%></td>
       </tr>
       <% end %>
     </tbody>
