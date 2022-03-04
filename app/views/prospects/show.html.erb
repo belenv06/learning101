@@ -1,14 +1,32 @@
-<%= @prospect.name %>
-<%= @prospect.lastname %>
-<%= @prospect.cellphone %>
-<i class="fa-regular fa-arrow-left-long"></i> <%= link_to 'regresar atras', prospects_path %>
+<div class="m-5 p-3"> 
+  <%= link_to prospects_path, class: "links" do %>
+    <i class="fa-solid fa-arrow-left"></i> Regresar atras 
+  <% end %>
 
-<h1> Crear nuevo comentario </h1>
-<%= simple_form_for [ @prospect, @comment ] do |f| %>
-<%= f.input :message %>
-<%= f.submit %>
-<% end %>
+  <div class="info-prospect"> 
+    <div class="mb-3"> 
+      <h2> <%= @prospect.name %> <%= @prospect.lastname %></h2>
+    </div>
+  
+    <p class="info-details"> <i class="fa-solid fa-phone"></i> <%= @prospect.cellphone %> </p>
+    <p class="info-details"> <i class="fa-regular fa-envelope"></i> <%= @prospect.email %> </p>
+    <p class="info-details"> <i class="fa-solid fa-location-crosshairs"></i> <%= @prospect.address %> </p>
 
-<% @comments.each do |comment| %>
-<%= comment.message %>
-<% end %>
+  </div>
+
+  <div class="py-3 new-comment">
+    <h5> Crear nuevo comentario </h5>
+    <%= simple_form_for [ @prospect, @comment ] do |f| %>
+      <%= f.input :message %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+
+  <% @comments.each do |comment| %>
+  <div class="comments">
+    <p class="comments-user"> <%= comment.user.email %> </p>
+    <p class="comments-date"> <%= comment.created_at.strftime("%A %d, %B %Y - %H:%M") %> <%#= I18n.l(comment.created_at, format: '%A, %d de %B de %Y') %> </p>
+    <p class="comments-comment"> <%= comment.message %> </p>
+  </div>
+  <% end %>
+</div>
