@@ -1,0 +1,17 @@
+ 
+  <%= simple_form_for @prospect do |f| %>
+  <div class="row"> 
+    <div class="col"> <%= f.input :name %>  </div>
+    <div class="col"> <%= f.input :lastname %> </div>
+  </div>
+  <div class="row">
+    <div class="col-8"> <%= f.input :address %> </div>
+    <div class="col"> <%= f.input :cellphone %> </div>
+  </div>
+  <div class="row">
+    <div class="col"> <%= f.input :email %> </div>
+  <div>
+    
+    <%= f.association :status, label_method: :status, prompt: 'Elige el status' %>
+    <%= f.submit %>
+  <% end %>

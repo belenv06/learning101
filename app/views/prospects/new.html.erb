@@ -1,11 +1,62 @@
-<div class="m-5 p-3"> 
-  <%= simple_form_for @prospect do |f| %>
-    <%= f.input :name %>
-    <%= f.input :lastname %>
-    <%= f.input :address %>
-    <%= f.input :cellphone %>
-    <%= f.input :email %>
-    <%= f.association :status, label_method: :status, prompt: 'Elige el status' %>
-    <%= f.submit %>
-  <% end %>
+<div class="mx-5 px-5"> 
+  <div class="head-titles-new"> 
+    <h2> Crea un nuevo prospecto </h2>
+    <p> Rellena los datos correspondientes </p>
+    <%#= render "form" %>
+  </div>
+  <div class="d-flex justify-content-between line">
+    <div class="container-description-form"> 
+
+      <div class="content-card-new d-flex align-items-center justify-content-end"> 
+        <div class="description-new"> 
+          <p class="title-description-new"> Nombre </p> 
+          <p class="description-description-new"> Escribe un nombre </p> 
+        </div>
+        <div class="icon-new"> 
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+
+      <div class="content-card-new d-flex align-items-center justify-content-end"> 
+        <div class="description-new"> 
+          <p class="title-description-new"> Apellido </p> 
+          <p class="description-description-new"> Escribe los apellidos </p> 
+        </div>
+        <div class="icon-new"> 
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+
+      <div class="content-card-new d-flex align-items-center justify-content-end"> 
+        <div class="description-new"> 
+          <p class="title-description-new"> Dirección </p> 
+          <p class="description-description-new"> Escribe la Dirección </p> 
+        </div>
+        <div class="icon-new"> 
+          <i class="fa-solid fa-location-crosshairs"></i>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center justify-content-end"> 
+        <div class="description-new"> 
+          <p class="title-description-new"> Email </p> 
+          <p class="description-description-new"> Escribe el email </p> 
+        </div>
+        <div class="icon-new"> 
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="line-icon"> </div>
+
+    <div class="container-fill-form">
+      <div class="fill-titles"> 
+        <p> Paso 1/1 </p>
+        <h3> ¿Cuál es el nombre? </h3>
+        <p> Por favor ingrese el nombre del prospectado </p>
+      </div>
+    </div>
+  </div>
 </div>
