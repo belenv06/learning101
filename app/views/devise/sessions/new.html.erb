@@ -1,34 +1,35 @@
 <div class='login'>
 
   <h6>START FOR FREE</h6>
-  <h2>Log in</h2>
+  <h2>Iniciar sesión</h2>
 
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
-      <div class='input-wrapper'>
+      <%= javascript_pack_tag 'inputFocus' %>
+      <div class='input-wrapper-email'>
         <div class="label-input">Email</div>
         <div class='input-icon'>
           <%= f.input :email,
                       label: false,
                       required: false,
-                      autofocus: true,
                       input_html: { autocomplete: "email" } %>
-          <i class="fa-solid fa-envelope"></i>
+          <i class="fa-solid fa-envelope icon"></i>
         </div>
       </div>
-      <div class='input-wrapper'>
-        <div class="label-input">Password</div>
+      <div class='input-wrapper-password'>
+        <div class="label-input">Contraseña</div>
+
         <div class='input-icon'>
           <%= f.input :password,
                       label: false,
                       as: :password,
                       required: false,
                       input_html: { autocomplete: "current-password" } %>
-          <i class="fa-solid fa-eye"></i>
+          <i class="fa-solid fa-eye icon"></i>
         </div>
       </div>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <%= f.input :remember_me, input_html: { class: "toggle" }, as: :boolean if devise_mapping.rememberable? %>
     </div>
 
     <div class="form-actions">
