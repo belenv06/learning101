@@ -1,0 +1,36 @@
+.login {
+  width: 50%;
+  padding: 125px 90px;
+  .input-wrapper {
+    background-color: #F3F6FB;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    .label-input {
+      color: #92939c;
+    }
+    .input-icon{
+      display: flex;
+      width: 100%;
+      gap: 30px;
+      align-items: center;
+      .email, .password {
+        margin-top: 5px;
+        flex-grow: 1;
+        input {
+          background-color: #F3F6FB;
+          height: 35px;
+          color: black;
+          font-weight: bolder;
+        }
+      }
+      i {
+        font-size: 24px;
+        color: #92939c;
+      }
+    }
+  }
+  .form-control:focus {
+      background-color: white !important;
+  }
+}
