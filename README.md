@@ -2,15 +2,13 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 # Lista de mejoras
 
-## - Agregar avatar a tabla user y prospect
-## - Agregar gema para mapas y direcciones
-## - Editar Navbar
-## - Agregar contadores de prospectos
-## - Agregar contador de conversaciones
-## - Mejorar horario de comentarios
-## - Pensar la fumada de belen para los contadores
-## - Mejorar login de ingreso
-## - Poner condicional para estilos de comentario
-## -
-
-## Hacer Multi-Step-Form-03
++ Agregar avatar a tabla user y prospect
++ Agregar gema para mapas y direcciones
++ Editar Navbar
++ Agregar contadores de prospectos
++ Agregar contador de conversaciones
++ Mejorar horario de comentarios
++ Pensar la fumada de belen para los contadores
++ Mejorar login de ingreso
++ Poner condicional para estilos de comentario
++ Hacer Multi-Step-Form-03
