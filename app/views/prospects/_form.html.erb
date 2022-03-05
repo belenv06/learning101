@@ -11,7 +11,7 @@
   <div class="row">
     <div class="col"> <%= f.input :email %> </div>
   <div>
-    
+    <%= f.input :photo, as: :file %>
     <%= f.association :status, label_method: :status, prompt: 'Elige el status' %>
     <%= f.submit %>
   <% end %>

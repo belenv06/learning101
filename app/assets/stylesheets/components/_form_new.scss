@@ -1,6 +1,6 @@
 
 .head-titles-new {
-  border-bottom: 1px solid rgb(199, 199, 199);
+  border-bottom: 2px solid rgb(199, 199, 199);
   padding-bottom: 35px;
   h2 {
     margin-bottom: 5px;
@@ -26,6 +26,18 @@
 
 .content-card-new {
   margin-bottom: 40px;
+  padding-right: 40px;
+  position: relative;
+  .circle {
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: 3px solid rgb(194, 194, 194);
+    z-index: 1;
+    background-color: white;
+    right: -8px;
+  }
 }
 
 .icon-new {
@@ -46,20 +58,8 @@
 
 .container-description-form {
   width: 23%;
-  padding: 50px 40px 50px 0px;
-  border-right: 1px solid rgb(194, 194, 194);
-}
-// .line {
-//   position: relative;
-// }
-.line-icon {
-  border: 1px solid rgb(158, 158, 158);
-  // width: 1px;
-  height: 300px;
-  position: relative;
-  top: 80px;
-  left: -70px;
-  z-index: -1;
+  padding: 50px 0px 50px 0px;
+  border-right: 2px solid rgb(194, 194, 194);
 }
 
 .container-fill-form {
@@ -71,3 +71,13 @@
   padding-bottom: 20px;
   border-bottom: 1px solid rgb(209, 209, 209);
 }
+.line-icon {
+  border: 1px solid rgb(158, 158, 158);
+  // width: 1px;
+  height: 300px;
+  position: relative;
+  top: 80px;
+  right: 70px;
+  z-index: -1;
+}
+

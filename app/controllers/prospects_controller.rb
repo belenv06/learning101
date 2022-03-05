@@ -1,6 +1,10 @@
 class ProspectsController < ApplicationController
   def index
     @prospects = Prospect.all
+    @prospect = Prospect.where(status_id: 1).size
+    @interested = Prospect.where(status_id: 2).size
+    @client = Prospect.where(status_id: 3).size
+
   end
 
   def show
@@ -40,6 +44,6 @@ class ProspectsController < ApplicationController
 
   private 
   def prospects_params
-    params.require(:prospect).permit(:name, :lastname, :address, :cellphone, :email, :status_id)
+    params.require(:prospect).permit(:name, :lastname, :address, :cellphone, :email, :status_id, :photo)
   end
 end
