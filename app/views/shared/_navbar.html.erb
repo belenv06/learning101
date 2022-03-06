@@ -12,19 +12,32 @@
     <%= javascript_pack_tag 'dropdownPrueba' %>
 
     <% if user_signed_in? %>
-      <div class="dropdown-prueba navbar-nav-prueba" id="dropdown-prueba">
-        <div class="d-flex">
-          <div>
+
+      <%# dropdown desplegado %>
+      <div class="dropdown-prueba navbar-nav-prueba hide-options" id="dropdown-prueba">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class='nav-user'>
             <div class="nav-username"> <%= current_user.name %> </div>
             <div class="nav-email"> <%= current_user.email %> </div>
           </div>
           <%= cl_image_tag current_user.photo.key, class: "avatar" %>
         </div>
-        <div class="hide-options" id="option">
-          <%= link_to "Action", "#", class: "dropdown-item" %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+
+        <div class='dropdown-options'>
+          <%= link_to "Perfil", "#", class: "links btn btn-dropdown" %>
+          <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: "links btn btn-dropdown" %>
         </div>
       </div>
+
+      <%# Dropdown pequeño %>
+      <!--
+      <div class="dropdown-small hide-options d-none" id="dropdown-small">
+        <div class='d-flex align-items-center'>
+          <div class="nav-username me-3"> <%= current_user.name %> </div>
+          <%= cl_image_tag current_user.photo.key, class: "avatar" %>
+        </div>
+      </div>
+      -->
     <% end %>
 
 
