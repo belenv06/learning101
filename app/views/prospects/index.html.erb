@@ -34,9 +34,9 @@
         <tr >
             <td class="first-column"> 
               <% if prospect.photo.key  %>
-                <%= cl_image_tag prospect.photo.key, class: "photo-column" %>
+                <%= cl_image_tag prospect.photo.key, class: "avatar-img photo-column" %>
               <% else %>
-                <%= image_tag "avatar.png", class: "photo-column" %>
+                <%= image_tag "avatar.png", class: "avatar-img photo-column" %>
               <% end %>
               <%= prospect.name %> 
               <%= prospect.lastname %>
