@@ -4,13 +4,22 @@ class ProspectsController < ApplicationController
     @prospect = Prospect.where(status_id: 1).size
     @interested = Prospect.where(status_id: 2).size
     @client = Prospect.where(status_id: 3).size
-
+    @markers = @prospects.geocoded.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude
+        }
+    end
   end
 
   def show
     @prospect = Prospect.find(params[:id])
     @comments = @prospect.comments
     @comment = Comment.new
+    @marker = [{
+      lat: @prospect.latitude,
+      lng: @prospect.longitude
+    }]
   end
 
   def new
@@ -42,7 +51,7 @@ class ProspectsController < ApplicationController
     end
   end
 
-  private 
+  private
   def prospects_params
     params.require(:prospect).permit(:name, :lastname, :address, :cellphone, :email, :status_id, :photo)
   end
