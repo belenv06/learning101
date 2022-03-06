@@ -17,8 +17,8 @@
     <table class="">
       <thead>
         <tr>
-          <th class="first-email head-table-title" scope="col">Email</th>
-          <th class="head-table-title" scope="col">Nombres</th>
+          <th class="first-column head-table-title" scope="col">Nombres</th>
+          <th class="head-table-title" scope="col">Email</th>
           <th class="head-table-title" scope="col">Celular</th>
           <th class="head-table-title" scope="col">Estado</th>
           <th class="head-table-title" scope="col">Fecha de registro</th>
@@ -32,9 +32,16 @@
       <tbody class="tbody">
         <% @prospects.each do |prospect| %>
         <tr >
-            <td class="first-email"> <%= prospect.email %> </td>
-            <td> <%= prospect.name %>
-            <%= prospect.lastname %></td>
+            <td class="first-column"> 
+              <% if prospect.photo.key  %>
+                <%= cl_image_tag prospect.photo.key, class: "photo-column" %>
+              <% else %>
+                <%= image_tag "avatar.png", class: "photo-column" %>
+              <% end %>
+              <%= prospect.name %> 
+              <%= prospect.lastname %>
+            </td>
+            <td> <%= prospect.email %> </td>
             <td> <%= prospect.cellphone %></td>
             <td> <%= prospect.status.status %> </td>
             <td> <%= prospect.created_at.strftime("%Y-%m-%d")%></td>

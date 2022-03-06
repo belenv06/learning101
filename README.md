@@ -2,7 +2,7 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 # Lista de mejoras
 
-+ Agregar avatar a tabla user y prospect
++ Agregar avatar a tabla user y prospect -> middle done
 + Agregar gema para mapas y direcciones
 + Editar Navbar
 + Agregar contadores de prospectos -> done

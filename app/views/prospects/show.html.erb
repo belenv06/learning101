@@ -6,7 +6,7 @@
       <% if @prospect.photo.key %>
         <%= cl_image_tag @prospect.photo.key, class: "perfil-photo" %> 
       <% else %>
-        <%= "El usuario no tiene foto de perfil" %>
+        <%= image_tag "avatar.png", class: "perfil-photo" %>
       <% end %>
       <%= link_to edit_prospect_path(@prospect), class: "links btn btn-border" do %> 
         <i class="fa-regular fa-pen-to-square"></i>
