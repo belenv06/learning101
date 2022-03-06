@@ -1,6 +1,6 @@
 <div class=" container-all navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "logo-learning" %>
     <% end %>
 
@@ -12,15 +12,15 @@
     <%= javascript_pack_tag 'dropdownPrueba' %>
 
     <% if user_signed_in? %>
-      <div class="dropdown-prueba navbar-nav-prueba" id="dropdown-prueba"> 
+      <div class="dropdown-prueba navbar-nav-prueba" id="dropdown-prueba">
         <div class="d-flex">
-          <div> 
+          <div>
             <div class="nav-username"> <%= current_user.name %> </div>
             <div class="nav-email"> <%= current_user.email %> </div>
           </div>
           <%= cl_image_tag current_user.photo.key, class: "avatar" %>
         </div>
-        <div class="hide-options" id="option"> 
+        <div class="hide-options" id="option">
           <%= link_to "Action", "#", class: "dropdown-item" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>

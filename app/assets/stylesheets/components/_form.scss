@@ -122,6 +122,31 @@
     margin: 5%;
   }
 
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  border: none;
+  background-color: rgb(233, 233, 233);
+  border-radius: 15px;
+  box-shadow: none;
+  svg{
+    display: none;
+  }
+  input {
+    border-radius: 15px;
+    padding: 1.43rem 1.25rem;
+    background-color: rgb(233, 233, 233);
+    border: none;
+    &:focus {
+      outline: none;
+      border-radius: 15px;
+      background-color: white;
+      border-color: #1EDD88;
+      box-shadow: 0 0 0 0.25rem rgba(30, 221, 135, 0.25);
+    }
+  }
+}
+
 @media (max-width: 720px) {
   /* For a screen < 720px, this CSS will be read */
   .login {
