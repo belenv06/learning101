@@ -1,39 +1,41 @@
-<div class='login'>
+<div class='d-flex'>
+  <div class='login'>
+    <h2>Iniciar sesión</h2>
 
-  <h6>START FOR FREE</h6>
-  <h2>Iniciar sesión</h2>
 
-
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs">
-      <%= javascript_pack_tag 'inputFocus' %>
-      <div class='input-wrapper-email'>
-        <div class="label-input">Email</div>
-        <div class='input-icon'>
-          <%= f.input :email,
-                      label: false,
-                      required: false,
-                      input_html: { autocomplete: "email" } %>
-          <i class="fa-solid fa-envelope icon"></i>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-inputs">
+        <%= javascript_pack_tag 'inputFocus' %>
+        <div class='input-wrapper-email'>
+          <div class="label-input">Email</div>
+          <div class='input-icon'>
+            <%= f.input :email,
+                        label: false,
+                        required: false,
+                        input_html: { autocomplete: "email" } %>
+            <i class="fa-solid fa-envelope icon"></i>
+          </div>
         </div>
-      </div>
-      <div class='input-wrapper-password'>
-        <div class="label-input">Contraseña</div>
+        <div class='input-wrapper-password'>
+          <div class="label-input">Contraseña</div>
 
-        <div class='input-icon'>
-          <%= f.input :password,
-                      label: false,
-                      as: :password,
-                      required: false,
-                      input_html: { autocomplete: "current-password" } %>
-          <i class="fa-solid fa-eye icon"></i>
+          <div class='input-icon'>
+            <%= f.input :password,
+                        label: false,
+                        as: :password,
+                        required: false,
+                        input_html: { autocomplete: "current-password" } %>
+            <i class="fa-solid fa-eye icon"></i>
+          </div>
         </div>
+        <%= f.input :remember_me, input_html: { class: "toggle" }, as: :boolean if devise_mapping.rememberable? %>
       </div>
-      <%= f.input :remember_me, input_html: { class: "toggle" }, as: :boolean if devise_mapping.rememberable? %>
-    </div>
 
-    <div class="form-actions">
-      <%= f.submit "Iniciar sesión", class: 'btn btn-blue' %>
-    </div>
-  <% end %>
+      <div class="form-actions">
+        <%= f.submit "Iniciar sesión", class: 'btn btn-blue' %>
+      </div>
+    <% end %>
+  </div>
+  <div class="logo-rigth">
+  </div>
 </div>
