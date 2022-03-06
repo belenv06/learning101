@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  height: 60px !important;
+  // height: 60px !important;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -32,10 +32,23 @@
 .navbar-nav{
   padding: 15px 25px;
   border-radius: 15px;
-  box-shadow: 0 15px 30px 0px rgb(235, 235, 235)
+  box-shadow: 0 15px 30px 0px rgb(235, 235, 235);
+  &:hover {
+    box-shadow: 0 2px 10px 0px rgb(235, 235, 235);
+  }
 }
 
 .container-fluid {
   padding: 0px;
 }
 
+
+
+// Estilos para Dropdown
+
+.dropdown-menu {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 15px 30px 0px rgb(235, 235, 235);
+
+}
