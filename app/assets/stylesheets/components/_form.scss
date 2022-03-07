@@ -16,10 +16,11 @@
     border-radius: 30px;
     .label-input {
       position: absolute;
-      color: #92939c;
+      color: #494949;
       margin-left: 13.5px;
       margin-top: 3px;
       font-weight: bolder;
+      font-size: 14px;
     }
     .input-icon{
       display: flex;
@@ -38,7 +39,7 @@
       }
       i {
         font-size: 24px;
-        color: #92939c;
+        color: #494949;
         position: absolute;
         right: 30px;
       }
