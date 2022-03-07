@@ -1,6 +1,6 @@
 .login {
   color: white;
-  width: 50%;
+  width: 60%;
   padding: 125px 90px;
 
   h2 {
@@ -116,11 +116,6 @@
   height: calc(100vh - 60px);
 }
 
-.logo-rigth {
-    width:50%;
-    border-radius: 15px;
-    margin: 5%;
-  }
 
 @media (max-width: 720px) {
   /* For a screen < 720px, this CSS will be read */
