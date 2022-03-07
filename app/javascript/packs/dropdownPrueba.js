@@ -1,9 +1,14 @@
 document.addEventListener("turbolinks:load", () => {
   const dropdownPrueba = document.getElementById("dropdown-prueba")
-  if (dropdownPrueba) { 
-    dropdownPrueba.addEventListener('click', (event) => {
-      const options = document.getElementById('option');
-      options.classList.toggle('hide-options');
-    })
+  // const dropdownSmall = document.getElementById("dropdown-small")
+  if (dropdownPrueba) {
+    dropdownPrueba.addEventListener("click", (event) => {
+      dropdownPrueba.classList.toggle("hide-options");
+      // dropdownSmall.classList.toggle("hide-options");
+    });
+    // dropdownSmall.addEventListener("click", (event) => {
+    //   dropdownPrueba.classList.toggle("hide-options");
+    //   dropdownSmall.classList.toggle("hide-options");
+    // });
   }
 });
