@@ -6,9 +6,5 @@ document.addEventListener("turbolinks:load", () => {
       dropdownPrueba.classList.toggle("hide-options");
       // dropdownSmall.classList.toggle("hide-options");
     });
-    // dropdownSmall.addEventListener("click", (event) => {
-    //   dropdownPrueba.classList.toggle("hide-options");
-    //   dropdownSmall.classList.toggle("hide-options");
-    // });
   }
 });
