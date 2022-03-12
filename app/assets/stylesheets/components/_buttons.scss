@@ -46,7 +46,9 @@
 }
 
 .btn-dropdown{
-  border-radius: 10px;
+  font-weight: 400;
+  border-radius: 20px;
+  border: 1px solid rgba(22, 22, 22, 0.5);
   // border: 0.5px solid black;
   // color: black;
   // background-color: white;
@@ -54,9 +56,15 @@
   // margin-bottom: 5px;
   // padding: 30px 5px;
   transition: all .4s ease;
+  padding: 2px 12px;
+
+  &:first-child {
+    margin-bottom: 4px;
+  }
   &:hover{
     // border-color: transparent;
     background-color: #7D2BC9;
     color: white !important;
+    border-color: white;
   }
 }

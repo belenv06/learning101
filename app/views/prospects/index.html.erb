@@ -1,16 +1,30 @@
 <div class="container-all py-5">
   <div class="pb-4 align-items-center">
-    <h1 class="title-prospect">Prospectos </h1>
-    <div class="box-line"> </div>
-    <div class="d-flex justify-content-end">
-      <div class="circle1"> <%= pluralize(@prospect, "Prospecto") %> </div>
-      <%# pluralize para el plural %>
-      <div class="circle"> <%= pluralize(@interested, "Interesado") %> </div>
-      <div class="circle1"> <%= pluralize(@client, "Cliente") %> </div>
+    <div class="d-flex justify-content-between my-5">
+      <div class=""> 
+        <h1 class="title-prospect">Prospectos </h1>
+        <div class="box-line"> </div>
+        <%= link_to new_prospect_path, class: "links btn btn-nuevo" do %>
+        <i class="fa-plus"> Nuevo Prospecto</i>
+        <% end %>
+      </div>
+      <div class="circle-all d-flex justify-content-end""> 
+        <div class="circle1"> 
+          <div class="circle-number1"> <%= pluralize(@prospect, "Prospecto").first %></div> 
+          <p> <%= pluralize(@prospect, "Prospecto")[1..-1] %></p> 
+        </div>
+        <%# pluralize para el plural %>
+        <div class="circle2"> 
+          <div class="circle-number2"> <%= pluralize(@interested, "Interesado").first %> </div>
+          <div class="circle-word2"> <%= pluralize(@interested, "Interesado")[1..-1] %> </div>
+        </div>
+        <div class="circle3"> 
+          <div class="circle-number3"> <%= pluralize(@client, "Cliente").first %> </div>
+          <p> <%= pluralize(@client, "Cliente")[1..-1] %> </p>
+        </div>
+      </div>
+      <%# Circle SE ENCUENTRA EN _table.scss %>
     </div>
-     <%= link_to new_prospect_path, class: "links btn btn-nuevo" do %>
-     <i class="fa-plus"> Nuevo Prospecto</i>
-    <% end %>
   </div>
 
 

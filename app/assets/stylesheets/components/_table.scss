@@ -4,10 +4,16 @@
 //   border: 1px solid rgb(192, 192, 192);
 // }
 
+
 .table-list-prospect {
   padding: 15px 5px;
   border-radius: 15px;
   border: 1px solid rgb(216, 216, 216);
+}
+
+.circle-all {
+  gap: 18px;
+  
 }
 
 .circle1 {
@@ -15,15 +21,72 @@
   height: 150px;
   width: 150px;
   border: 1px solid #7D2BC9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 35px;
+
+  .circle-number1 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #7D2BC9;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #7D2BC9;
+    margin: 0px;
+  }
 }
 
-.circle {
+
+.circle2 {
   border-radius: 50%;
   height: 200px;
   width: 200px;
   background-color: #7D2BC9;
+  box-shadow: 0px 4px 30px  rgba(125, 43, 201, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 35px;
+  .circle-number2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #ffffff;
+  }
+  .circle-word2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+  }
 }
 
+.circle3 {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: 1px solid #7D2BC9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 35px;
+  align-self: end;
+  .circle-number3 {
+    font-size: 50px;
+    font-weight: 800;
+    color: #7D2BC9;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #7D2BC9;
+    margin: 0px;
+  }
+}
 
 
 
